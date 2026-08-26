@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>プライバシーポリシー | 私の実験帳</title>
+<meta name="robots" content="noindex, follow" />
+<meta name="description" content="「私の実験帳」のプライバシーポリシーです。ウェイティングリスト登録時に取得する情報や利用目的についてご案内します。" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@400;500;700&family=Zen+Maru+Gothic:wght@500;700&display=swap" rel="stylesheet" />
+<style>
+  *, *::before, *::after { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: #FBFDFC;
+    color: #17282B;
+    font-family: "Zen Kaku Gothic New", "Hiragino Kaku Gothic ProN", sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+  a { color: #1F9585; text-decoration: none; }
+  a:hover { color: #17867a; text-decoration: underline; }
+
+  .page {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background: #FBFDFC;
+  }
+
+  .site-header {
+    padding: 18px 20px;
+    border-bottom: 1px solid #F0F4F3;
+  }
+  .header-inner {
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #17282B;
+  }
+  .logo-text {
+    font-family: "Zen Maru Gothic", sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+  }
+  .back-link {
+    font-size: 14px;
+    font-weight: 500;
+    color: #5C7175;
+  }
+  .back-link:hover { color: #1F9585; }
+
+  main {
+    flex: 1;
+    padding: 64px 20px 96px;
+  }
+  .content {
+    max-width: 760px;
+    margin: 0 auto;
+  }
+  h1 {
+    margin: 0 0 32px;
+    font-size: clamp(26px, 4.4vw, 34px);
+    font-weight: 700;
+    line-height: 1.5;
+  }
+  .intro {
+    margin: 0 0 40px;
+    font-size: 15px;
+    line-height: 2.05;
+    color: #3C5254;
+  }
+  section { margin-bottom: 36px; }
+  section h2 {
+    margin: 0 0 14px;
+    font-size: 18px;
+    font-weight: 700;
+    color: #102325;
+  }
+  section p {
+    margin: 0 0 12px;
+    font-size: 15px;
+    line-height: 2.05;
+    color: #3C5254;
+  }
+  section p:last-child { margin-bottom: 0; }
+  section ul {
+    margin: 0 0 12px;
+    padding-left: 22px;
+    font-size: 15px;
+    line-height: 2.05;
+    color: #3C5254;
+  }
+
+  .contact-section p { margin-bottom: 20px; }
+
+  .contact-success {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    background: #E9F6F3;
+    border: 1px solid #C7E8E1;
+    border-radius: 20px;
+    padding: 20px 22px;
+    max-width: 480px;
+  }
+  .contact-success .check {
+    flex: none;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background: #1F9585;
+    color: #fff;
+    display: grid;
+    place-items: center;
+    font-size: 15px;
+    font-weight: 700;
+  }
+  .contact-success strong {
+    display: block;
+    font-size: 16px;
+    margin-bottom: 4px;
+  }
+  .contact-success .note {
+    font-size: 14px;
+    color: #4E6A6D;
+  }
+
+  .contact-form { max-width: 480px; }
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+  }
+  .contact-form input,
+  .contact-form textarea {
+    width: 100%;
+    font-family: inherit;
+    color: #17282B;
+    background: #fff;
+    border: 1.5px solid #DCE7E5;
+    border-radius: 16px;
+    outline: none;
+    transition: border-color 180ms ease, box-shadow 180ms ease;
+  }
+  .contact-form input {
+    font-size: 16px;
+    padding: 15px 18px;
+  }
+  .contact-form textarea {
+    margin-top: 10px;
+    font-size: 14.5px;
+    padding: 13px 16px;
+    resize: vertical;
+  }
+  .contact-form input:focus,
+  .contact-form textarea:focus {
+    border-color: #2AAE9C;
+    box-shadow: 0 0 0 4px rgba(42, 174, 156, 0.15);
+  }
+  .contact-form-actions {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 12px;
+  }
+  .contact-form button {
+    flex: 0 0 auto;
+    font-family: inherit;
+    font-size: 15px;
+    font-weight: 700;
+    color: #fff;
+    background: #1F9585;
+    border: none;
+    padding: 14px 24px;
+    border-radius: 16px;
+    cursor: pointer;
+    box-shadow: 0 8px 20px rgba(31, 149, 133, 0.24);
+    transition: transform 200ms ease, background 200ms ease;
+  }
+  .contact-form button:hover:not(:disabled) {
+    background: #17867a;
+    transform: translateY(-1px);
+  }
+  .contact-form button:disabled {
+    cursor: not-allowed;
+    opacity: 0.85;
+  }
+  .contact-error {
+    margin: 10px 2px 0;
+    font-size: 13px;
+    color: #C4553F;
+  }
+  .hidden { display: none !important; }
+
+  .meta {
+    margin: 48px 0 0;
+    font-size: 13.5px;
+    color: #7E9296;
+  }
+
+  .site-footer {
+    padding: 32px 20px;
+    border-top: 1px solid #F0F4F3;
+  }
+  .footer-inner {
+    max-width: 760px;
+    margin: 0 auto;
+    font-size: 12.5px;
+    color: #9AA9AC;
+  }
+</style>
+</head>
+<body>
+<div class="page">
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="logo">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1F9585" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M9.5 3h5"></path>
+          <path d="M10.5 3v5.2L6.3 16.4A3.2 3.2 0 0 0 9.1 21h5.8a3.2 3.2 0 0 0 2.8-4.6L13.5 8.2V3"></path>
+          <path d="M7.6 14.2h8.8"></path>
+        </svg>
+        <span class="logo-text">私の実験帳</span>
+      </a>
+      <a href="index.html" class="back-link">トップへ戻る</a>
+    </div>
+  </header>
+
+  <main>
+    <div class="content">
+      <h1>プライバシーポリシー</h1>
+      <p class="intro">「私の実験帳」（以下「本サービス」）では、ウェイティングリストへの登録等に際して取得する情報について、以下のとおり取り扱います。</p>
+
+      <section>
+        <h2>1. 取得する情報</h2>
+        <p>本サービスでは、ウェイティングリストへの登録時に、以下の情報を取得する場合があります。</p>
+        <ul>
+          <li>メールアドレス</li>
+          <li>フォーム送信日時</li>
+          <li>その他、利用者が任意に入力した情報（コメント欄など）</li>
+        </ul>
+        <p>また、サービス改善やアクセス状況の把握のため、利用するホスティングサービスやアクセス解析サービス等により、IPアドレス、ブラウザ情報、端末情報などが自動的に取得される場合があります。</p>
+      </section>
+
+      <section>
+        <h2>2. 利用目的</h2>
+        <p>取得した情報は、以下の目的で利用します。</p>
+        <ul>
+          <li>「私の実験帳」のリリース時のお知らせ</li>
+          <li>アプリに関する重要なお知らせ</li>
+          <li>ウェイティングリストの管理</li>
+          <li>本サービスの改善</li>
+          <li>お問い合わせへの対応</li>
+          <li>不正利用等の防止</li>
+        </ul>
+        <p>ウェイティングリスト登録時に取得したメールアドレスを、上記目的と無関係な広告配信のために利用することはありません。</p>
+      </section>
+
+      <section>
+        <h2>3. 第三者提供</h2>
+        <p>取得した個人情報を、以下の場合を除き、本人の同意なく第三者へ提供することはありません。</p>
+        <ul>
+          <li>法令に基づく場合</li>
+          <li>人の生命、身体または財産の保護のために必要な場合</li>
+          <li>利用目的の達成に必要な範囲で外部サービスへ処理を委託する場合</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>4. 外部サービスについて</h2>
+        <p>本サービスでは、ウェブサイトの公開、フォーム受付等のため、外部サービスを利用しています。現在、本LPは Netlify 上で公開され、ウェイティングリストのフォーム送信には Formspree を利用しています。</p>
+        <p>今後、ウェイティングリスト管理等のために追加の外部サービスを利用する場合があります。各外部サービスに送信された情報については、それぞれのサービス提供者のプライバシーポリシーに基づいて管理されます。</p>
+      </section>
+
+      <section>
+        <h2>5. 情報の管理</h2>
+        <p>取得した情報について、不正アクセス、漏えい、紛失、改ざん等を防止するため、合理的な安全管理措置に努めます。</p>
+      </section>
+
+      <section>
+        <h2>6. 登録解除・情報削除</h2>
+        <p>ウェイティングリストからの登録解除、または登録したメールアドレスの削除を希望する場合は、問い合わせ先までご連絡ください。本人確認等を行ったうえで、合理的な範囲で対応します。</p>
+      </section>
+
+      <section>
+        <h2>7. Cookie等について</h2>
+        <p>本サイトでは、利用状況の把握やサービス改善のためにCookieまたは類似技術を利用する場合があります。</p>
+        <p>Cookieの利用については、ブラウザの設定から制限または無効化できます。ただし、一部機能が正常に動作しなくなる場合があります。</p>
+      </section>
+
+      <section>
+        <h2>8. プライバシーポリシーの変更</h2>
+        <p>本ポリシーの内容は、法令の変更やサービス内容の変更等に応じて、必要に応じて変更する場合があります。重要な変更がある場合には、本サイト等を通じてお知らせします。</p>
+      </section>
+
+      <section class="contact-section" id="contact">
+        <h2>9. お問い合わせ</h2>
+        <p>本ポリシーに関するお問い合わせ、ウェイティングリストからの登録解除・情報削除のご希望は、以下のフォームからご連絡ください。</p>
+
+        <div id="contact-success" class="contact-success hidden" role="status">
+          <span class="check">✓</span>
+          <span>
+            <strong>送信しました</strong>
+            <span class="note">内容を確認のうえご連絡します。</span>
+          </span>
+        </div>
+
+        <form id="contact-form" class="contact-form" novalidate>
+          <label for="contact-email" class="sr-only">メールアドレス</label>
+          <input id="contact-email" name="email" type="email" inputmode="email" autocomplete="email" placeholder="メールアドレス" />
+
+          <label for="contact-message" class="sr-only">お問い合わせ内容</label>
+          <textarea id="contact-message" name="message" placeholder="お問い合わせ内容" rows="4"></textarea>
+
+          <div class="contact-form-actions">
+            <button type="submit" id="contact-submit">
+              <span id="contact-submit-label">送信する</span>
+            </button>
+          </div>
+          <p id="contact-error" class="contact-error hidden" role="alert"></p>
+        </form>
+      </section>
+
+      <p class="meta">制定日：2026年8月26日</p>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">© 2026 私の実験帳</div>
+  </footer>
+</div>
+
+<script>
+  (function () {
+    var FORMSPREE_ENDPOINT = "https://formspree.io/f/xaewreww";
+    var form = document.getElementById("contact-form");
+    var emailInput = document.getElementById("contact-email");
+    var messageInput = document.getElementById("contact-message");
+    var submitButton = document.getElementById("contact-submit");
+    var submitLabel = document.getElementById("contact-submit-label");
+    var errorEl = document.getElementById("contact-error");
+    var successEl = document.getElementById("contact-success");
+
+    function setError(message) {
+      if (message) {
+        errorEl.textContent = message;
+        errorEl.classList.remove("hidden");
+        emailInput.setAttribute("aria-invalid", "true");
+      } else {
+        errorEl.textContent = "";
+        errorEl.classList.add("hidden");
+        emailInput.removeAttribute("aria-invalid");
+      }
+    }
+
+    function setLoading(isLoading) {
+      submitButton.disabled = isLoading;
+      submitLabel.textContent = isLoading ? "送信中…" : "送信する";
+    }
+
+    emailInput.addEventListener("input", function () {
+      setError("");
+    });
+
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+      var email = emailInput.value.trim();
+      var message = messageInput.value.trim();
+
+      if (!email) {
+        setError("メールアドレスを入力してください。");
+        return;
+      }
+      if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email)) {
+        setError("メールアドレスの形式をご確認ください。");
+        return;
+      }
+      if (!message) {
+        setError("お問い合わせ内容を入力してください。");
+        return;
+      }
+
+      setError("");
+      setLoading(true);
+
+      fetch(FORMSPREE_ENDPOINT, {
+        method: "POST",
+        headers: { "Content-Type": "application/json", Accept: "application/json" },
+        body: JSON.stringify({ email: email, message: message, _subject: "私の実験帳 お問い合わせ" })
+      })
+        .then(function (res) {
+          if (!res.ok) throw new Error("request failed");
+          form.classList.add("hidden");
+          successEl.classList.remove("hidden");
+        })
+        .catch(function () {
+          setLoading(false);
+          setError("送信できませんでした。少し時間をおいてお試しください。");
+        });
+    });
+  })();
+</script>
+</body>
+</html>
