@@ -157,7 +157,7 @@
   .hero-desc { margin: 0 0 30px; font-size: 15.5px; line-height: 2.05; color: #3C5254; max-width: 34em; }
   #signup { scroll-margin-top: 90px; }
   .hero-image { justify-self: center; }
-  .hero-image img { display: block; width: min(340px, 82vw); height: auto; filter: drop-shadow(0 30px 50px rgba(23, 40, 43, 0.16)); }
+  .hero-image img { display: block; width: min(340px, 82vw); height: auto; border-radius: 36px; filter: drop-shadow(0 30px 50px rgba(23, 40, 43, 0.16)); }
 
   @media (min-width: 900px) {
     .hero-grid { grid-template-columns: 1.05fr 0.95fr; gap: 56px; }
@@ -204,8 +204,8 @@
   .step-row p:last-child { margin-bottom: 0; }
   .step-image { justify-self: center; }
   .step-image img { display: block; height: auto; }
-  .step-image.sm img { width: min(300px, 78vw); filter: drop-shadow(0 26px 44px rgba(23, 40, 43, 0.14)); }
-  .step-image.lg img { width: min(340px, 84vw); filter: drop-shadow(0 30px 50px rgba(23, 40, 43, 0.16)); }
+  .step-image.sm img { width: min(300px, 78vw); border-radius: 32px; filter: drop-shadow(0 26px 44px rgba(23, 40, 43, 0.14)); }
+  .step-image.lg img { width: min(340px, 84vw); border-radius: 36px; filter: drop-shadow(0 30px 50px rgba(23, 40, 43, 0.16)); }
 
   /* ---------- theme ---------- */
   .theme { padding: 92px 20px; background: #fff; border-top: 1px solid #F0F4F3; border-bottom: 1px solid #F0F4F3; }
@@ -218,7 +218,7 @@
   .theme-card .row { display: flex; align-items: center; gap: 12px; font-size: 15px; line-height: 1.6; }
   .theme-card .row .dot { flex: none; width: 8px; height: 8px; border-radius: 50%; }
   .theme-images { display: flex; justify-content: center; gap: 18px; flex-wrap: wrap; }
-  .theme-images img { display: block; width: min(264px, 62vw); height: auto; filter: drop-shadow(0 26px 44px rgba(23, 40, 43, 0.14)); }
+  .theme-images img { display: block; width: min(264px, 62vw); height: auto; border-radius: 28px; filter: drop-shadow(0 26px 44px rgba(23, 40, 43, 0.14)); }
   .theme-images img.offset { margin-top: 36px; }
 
   /* ---------- failed experiments ---------- */
@@ -329,7 +329,7 @@
       </div>
 
       <div class="hero-image" data-reveal>
-        <img src="img/home.png" alt="「私の実験帳」ホーム画面。進行中の実験と毎日の記録が並んでいる" />
+        <img src="img/home.png" alt="「私の実験帳」ホーム画面。進行中の実験2件と、それぞれの記録状況が並んでいる" />
       </div>
     </div>
   </section>
@@ -372,7 +372,7 @@
             <p>写真や一言メモで、実験中の変化を残します。</p>
             <p>毎日必ず記録する必要はなく、残したいタイミングだけでOK。</p>
           </div>
-          <div class="step-image sm"><img src="img/home.png" alt="実験中のホーム画面。日ごとの写真とメモが並んでいる" /></div>
+          <div class="step-image sm"><img src="img/home.png" alt="実験中のホーム画面。「今日の記録を追加」ボタンと、記録済みの写真が並んでいる" /></div>
         </div>
 
         <div class="step-row two-col" data-reveal>
@@ -382,7 +382,7 @@
             <p>開始時と終了時の写真を比較。効果があったのか、変わらなかったのか。</p>
             <p>結果を残して、次に試すことにつなげます。</p>
           </div>
-          <div class="step-image lg"><img src="img/result.png" alt="実験の結果画面。Before / Afterの写真比較と結果メモ、実験ログ" /></div>
+          <div class="step-image lg"><img src="img/result.png" alt="実験の詳細画面。開始時（Before）の写真と、日々の実験ログが並んでいる" /></div>
         </div>
       </div>
     </div>
@@ -396,17 +396,17 @@
         <p>単発の習慣記録ではありません。一つのテーマについて、いろいろな方法を試していけます。</p>
         <div class="theme-card">
           <span class="label">テーマ</span>
-          <strong>ニキビを改善したい</strong>
+          <strong>睡眠</strong>
           <div class="rows">
-            <div class="row"><span class="dot" style="background:#2AAE9C"></span>枕に顔をつけずに寝る</div>
-            <div class="row"><span class="dot" style="background:#F0C64B"></span>毎朝納豆を食べる</div>
-            <div class="row"><span class="dot" style="background:#B9A7E6"></span>枕カバーを毎日交換する</div>
+            <div class="row"><span class="dot" style="background:#2AAE9C"></span>寝る90分前にスマホを別の部屋へ置く</div>
+            <div class="row"><span class="dot" style="background:#F0C64B"></span>23時までに寝る</div>
+            <div class="row"><span class="dot" style="background:#B9A7E6"></span>朝いちばんに白湯を1杯飲む</div>
           </div>
         </div>
       </div>
       <div class="theme-images" data-reveal>
-        <img src="img/themes.png" alt="テーマ一覧画面。ニキビ、睡眠、集中力、食生活などのテーマが並ぶ" />
-        <img class="offset" src="img/theme-detail.png" alt="「ニキビを改善したい」テーマの詳細画面。6件の実験と気づきメモ" />
+        <img src="img/themes.png" alt="テーマ一覧画面。睡眠、集中力などのテーマが並ぶ" />
+        <img class="offset" src="img/theme-detail.png" alt="「睡眠」テーマの詳細画面。実験数と進行状況、実験中の実験一覧" />
       </div>
     </div>
   </section>
