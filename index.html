@@ -4,7 +4,7 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>私の実験帳 | 試して、記録して、自分に合う方法を見つける。</title>
-<meta name="description" content="肌、睡眠、食事、勉強、仕事。気になったことを試して、写真やメモで変化を残す。あなた専用のプライベートラボ「私の実験帳」、iOS版ウェイティングリスト受付中。" />
+<meta name="description" content="肌、睡眠、食事、勉強、仕事。気になったことを試して、写真やメモで変化を残す。あなた専用のプライベートラボ「私の実験帳」、App Storeで配信中。" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@400;500;700&family=Zen+Maru+Gothic:wght@500;700&display=swap" rel="stylesheet" />
@@ -167,51 +167,15 @@
     .two-col.reverse > *:first-child { order: 2; }
   }
 
-  /* ---------- forms (hero + final CTA) ---------- */
-  .waitlist-form { max-width: 520px; }
+  /* ---------- App Store badge (hero + final CTA) ---------- */
   .sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
-  .waitlist-form input,
-  .waitlist-form textarea,
-  .contact-form input,
-  .contact-form textarea {
-    width: 100%; font-size: 16px; padding: 15px 18px; border-radius: 16px;
-    border: 1.5px solid #DCE7E5; background: #fff; color: #17282B; outline: none;
-    transition: border-color 180ms ease, box-shadow 180ms ease;
-  }
-  .waitlist-form textarea,
-  .contact-form textarea {
-    margin-top: 10px; font-size: 14.5px; padding: 13px 16px; resize: vertical;
-  }
-  .waitlist-form input:focus, .waitlist-form textarea:focus,
-  .contact-form input:focus, .contact-form textarea:focus {
-    border-color: #2AAE9C; box-shadow: 0 0 0 4px rgba(42, 174, 156, 0.15);
-  }
-  .waitlist-form-actions { display: flex; justify-content: flex-end; margin-top: 10px; }
-  .waitlist-form button, .contact-form button {
-    flex: 0 0 auto; font-family: inherit; font-size: 15px; font-weight: 700; color: #fff;
-    background: #1F9585; border: none; padding: 15px 26px; border-radius: 16px; cursor: pointer;
-    box-shadow: 0 8px 20px rgba(31, 149, 133, 0.24); transition: transform 200ms ease, background 200ms ease;
-  }
-  .waitlist-form button:hover:not(:disabled), .contact-form button:hover:not(:disabled) {
-    background: #17867a; transform: translateY(-1px);
-  }
-  .waitlist-form button:disabled, .contact-form button:disabled { cursor: not-allowed; opacity: 0.85; }
-  .form-error { margin: 10px 2px 0; font-size: 13px; color: #C4553F; }
-  .form-note { margin: 12px 2px 0; font-size: 12.5px; color: #7E9296; }
+  .app-store-badge { display: inline-block; line-height: 0; transition: transform 200ms ease, filter 200ms ease; }
+  .app-store-badge:hover { transform: translateY(-2px); filter: drop-shadow(0 10px 20px rgba(23, 40, 43, 0.18)); }
+  .app-store-badge img { display: block; height: 60px; width: auto; }
+  .form-note { margin: 14px 2px 0; font-size: 12.5px; color: #7E9296; }
   .form-note a { color: #1F9585; }
   .form-note a:hover { text-decoration: underline; }
   .hidden { display: none !important; }
-
-  .success-card {
-    display: flex; align-items: flex-start; gap: 14px; background: #E9F6F3; border: 1px solid #C7E8E1;
-    border-radius: 20px; padding: 20px 22px; max-width: 480px;
-  }
-  .success-card .check {
-    flex: none; width: 28px; height: 28px; border-radius: 50%; background: #1F9585; color: #fff;
-    display: grid; place-items: center; font-size: 15px; font-weight: 700;
-  }
-  .success-card strong { display: block; font-size: 16px; margin-bottom: 4px; }
-  .success-card .note { font-size: 14px; color: #4E6A6D; }
 
   /* ---------- concept ---------- */
   .concept { padding: 84px 20px; background: #fff; border-top: 1px solid #F0F4F3; border-bottom: 1px solid #F0F4F3; }
@@ -293,23 +257,7 @@
   .final-inner { max-width: 620px; margin: 0 auto; text-align: center; }
   .final-inner .section-title { margin-bottom: 26px; font-size: clamp(28px, 5vw, 44px); line-height: 1.42; }
   .final-inner .lead { margin: 0 0 40px; font-size: 15px; line-height: 2; color: #4E6A6D; }
-  .final-success {
-    display: inline-flex; align-items: center; gap: 14px; background: #fff; border-radius: 20px;
-    padding: 22px 28px; box-shadow: 0 12px 30px rgba(23, 40, 43, 0.07);
-  }
-  .final-success .check {
-    flex: none; width: 30px; height: 30px; border-radius: 50%; background: #1F9585; color: #fff;
-    display: grid; place-items: center; font-size: 16px; font-weight: 700;
-  }
-  .final-success .text { text-align: left; }
-  .final-success strong { display: block; font-size: 16px; margin-bottom: 4px; }
-  .final-success .note { font-size: 14px; color: #4E6A6D; }
-  .final-cta .waitlist-form { margin: 0 auto; }
-  .final-cta .waitlist-form input, .final-cta .waitlist-form textarea { border-color: #CFE4E0; }
-  .final-cta .waitlist-form input:focus, .final-cta .waitlist-form textarea:focus { box-shadow: 0 0 0 4px rgba(42, 174, 156, 0.18); }
-  .final-cta .waitlist-form-actions { justify-content: center; margin-top: 14px; }
-  .final-cta .form-error { text-align: center; margin-top: 12px; color: #B54A34; }
-  .final-cta .form-note { text-align: center; }
+  .final-cta .app-store-badge { margin: 0 auto; }
 
   /* ---------- footer ---------- */
   .site-footer { padding: 56px 20px 44px; background: #FBFDFC; }
@@ -334,9 +282,9 @@
       </svg>
       <span class="brand-name">私の実験帳</span>
     </a>
-    <a href="#signup" class="header-cta">
-      <span class="header-cta-full">ウェイティングリストに登録</span>
-      <span class="header-cta-short">登録する</span>
+    <a href="https://apps.apple.com/jp/app/id6806997454" class="header-cta" target="_blank" rel="noopener">
+      <span class="header-cta-full">App Storeでダウンロード</span>
+      <span class="header-cta-short">ダウンロード</span>
     </a>
   </div>
 </header>
@@ -364,7 +312,7 @@
 
     <div class="hero-grid">
       <div data-reveal>
-        <div class="hero-badge"><span class="dot"></span>iOS版 開発中 ・ ウェイティングリスト受付中</div>
+        <div class="hero-badge"><span class="dot"></span>App Storeで配信中</div>
         <h1 class="hero-title">
           <span>試して、記録して、</span>
           <span>自分に合う方法を見つける。</span>
@@ -373,26 +321,10 @@
         <p class="hero-desc">肌、睡眠、食事、勉強、仕事。気になったことを試して、写真やメモで変化を残す。<br />「私の実験帳」は、あなた専用のプライベートラボです。</p>
 
         <div id="signup">
-          <div id="hero-success" class="success-card hidden" role="status">
-            <span class="check">✓</span>
-            <span>
-              <strong>登録しました</strong>
-              <span class="note">リリース時にお知らせします。</span>
-            </span>
-          </div>
-
-          <form id="hero-form" class="waitlist-form" novalidate>
-            <label for="hero-email" class="sr-only">メールアドレス</label>
-            <input id="hero-email" name="email" type="email" inputmode="email" autocomplete="email" placeholder="メールアドレス" />
-            <label for="hero-comment" class="sr-only">コメント（任意）</label>
-            <textarea id="hero-comment" name="comment" placeholder="コメント（任意）：試してみたいこと、気になっている機能など" rows="2"></textarea>
-            <div class="waitlist-form-actions">
-              <button type="submit" id="hero-submit"><span id="hero-submit-label">リリースを知らせてもらう</span></button>
-            </div>
-            <p id="hero-error" class="form-error hidden" role="alert"></p>
-            <p class="form-note">ご入力いただいたメールアドレスは、リリースのお知らせ等のために利用します。<a href="privacy.html">プライバシーポリシー</a></p>
-            <p class="form-note">現在iOS版を開発中です。</p>
-          </form>
+          <a href="https://apps.apple.com/jp/app/id6806997454" class="app-store-badge" target="_blank" rel="noopener" aria-label="App Storeでダウンロード">
+            <img src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/ja-jp?size=250x83" alt="Download on the App Store" width="180" height="60" />
+          </a>
+          <p class="form-note">無料でダウンロードできます。Proプランは<a href="privacy.html">プライバシーポリシー</a>をご確認ください。</p>
         </div>
       </div>
 
@@ -526,30 +458,14 @@
   </section>
 
   <!-- FINAL CTA -->
-  <section class="final-cta" id="waitlist">
+  <section class="final-cta" id="download">
     <div class="final-inner" data-reveal>
       <h2 class="section-title">最初の実験を、<br />始めてみませんか？</h2>
-      <p class="lead">「私の実験帳」は現在iOS版を開発中です。<br />リリース時にお知らせします。</p>
+      <p class="lead">「私の実験帳」はApp Storeから無料でダウンロードできます。</p>
 
-      <div id="final-success" class="final-success hidden" role="status">
-        <span class="check">✓</span>
-        <span class="text">
-          <strong>登録しました</strong>
-          <span class="note">リリース時にお知らせします。</span>
-        </span>
-      </div>
-
-      <form id="final-form" class="waitlist-form" novalidate>
-        <label for="final-email" class="sr-only">メールアドレス</label>
-        <input id="final-email" name="email" type="email" inputmode="email" autocomplete="email" placeholder="メールアドレス" />
-        <label for="final-comment" class="sr-only">コメント（任意）</label>
-        <textarea id="final-comment" name="comment" placeholder="コメント（任意）：試してみたいこと、気になっている機能など" rows="2" style="text-align:left"></textarea>
-        <div class="waitlist-form-actions">
-          <button type="submit" id="final-submit"><span id="final-submit-label">ウェイティングリストに登録</span></button>
-        </div>
-        <p id="final-error" class="form-error hidden" role="alert"></p>
-        <p class="form-note">ご入力いただいたメールアドレスは、リリースのお知らせ等のために利用します。<a href="privacy.html">プライバシーポリシー</a></p>
-      </form>
+      <a href="https://apps.apple.com/jp/app/id6806997454" class="app-store-badge" target="_blank" rel="noopener" aria-label="App Storeでダウンロード">
+        <img src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/ja-jp?size=250x83" alt="Download on the App Store" width="200" height="67" />
+      </a>
     </div>
   </section>
 </main>
@@ -577,8 +493,6 @@
 
 <script>
   (function () {
-    var FORMSPREE_ENDPOINT = "https://formspree.io/f/xaewreww";
-
     // ----- sticky header shadow/blur on scroll -----
     var header = document.getElementById("site-header");
     function onScroll() {
@@ -610,72 +524,6 @@
       });
     }
 
-    // ----- waitlist forms (hero + final) -----
-    function setupWaitlistForm(prefix, subject) {
-      var form = document.getElementById(prefix + "-form");
-      var email = document.getElementById(prefix + "-email");
-      var comment = document.getElementById(prefix + "-comment");
-      var submitBtn = document.getElementById(prefix + "-submit");
-      var submitLabel = document.getElementById(prefix + "-submit-label");
-      var errorEl = document.getElementById(prefix + "-error");
-      var successEl = document.getElementById(prefix + "-success");
-      var idleLabel = submitLabel.textContent;
-
-      function setError(message) {
-        if (message) {
-          errorEl.textContent = message;
-          errorEl.classList.remove("hidden");
-          email.setAttribute("aria-invalid", "true");
-        } else {
-          errorEl.textContent = "";
-          errorEl.classList.add("hidden");
-          email.removeAttribute("aria-invalid");
-        }
-      }
-
-      function setLoading(isLoading) {
-        submitBtn.disabled = isLoading;
-        submitLabel.textContent = isLoading ? "送信中…" : idleLabel;
-      }
-
-      email.addEventListener("input", function () { setError(""); });
-
-      form.addEventListener("submit", function (e) {
-        e.preventDefault();
-        var emailValue = email.value.trim();
-        var commentValue = comment.value.trim();
-
-        if (!emailValue) {
-          setError("メールアドレスを入力してください。");
-          return;
-        }
-        if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(emailValue)) {
-          setError("メールアドレスの形式をご確認ください。");
-          return;
-        }
-
-        setError("");
-        setLoading(true);
-
-        fetch(FORMSPREE_ENDPOINT, {
-          method: "POST",
-          headers: { "Content-Type": "application/json", Accept: "application/json" },
-          body: JSON.stringify({ email: emailValue, comment: commentValue, _subject: subject })
-        })
-          .then(function (res) {
-            if (!res.ok) throw new Error("request failed");
-            form.classList.add("hidden");
-            successEl.classList.remove("hidden");
-          })
-          .catch(function () {
-            setLoading(false);
-            setError("送信できませんでした。少し時間をおいてお試しください。");
-          });
-      });
-    }
-
-    setupWaitlistForm("hero", "私の実験帳 ウェイティングリスト登録");
-    setupWaitlistForm("final", "私の実験帳 ウェイティングリスト登録");
   })();
 </script>
 </body>
